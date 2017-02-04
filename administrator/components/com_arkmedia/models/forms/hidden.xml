@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="plant" labels="false">
+
+		<field 
+			name="plant"
+			type="ark.extendedbutton"
+			key="redirect"
+			redirect="true"
+			token="true"
+			action="ark.action.folder"
+			href="index.php?option=com_arkmedia&amp;task=list.plant&amp;stack=%s"
+			text="COM_ARKMEDIA_XML_HIDDEN_PLANT_LBL"
+			icon="plus" />
+
+	</fieldset>
+</form>

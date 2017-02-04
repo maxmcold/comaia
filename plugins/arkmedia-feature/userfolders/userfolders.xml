@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="arkmedia-feature" method="upgrade">
+	<name>Ark Media Feature - User Folders</name>
+	<creationDate>March 2015</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>WebxSolution Ltd</author>
+	<authorEmail>info@arkextensions.com</authorEmail>
+	<authorUrl>http://www.arkextensions.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<div class="ark-install-box well pull-left text-center">
+			<!-- Only Display on Installer Screen (not config screen), Colour Required for Tooltips -->
+			<style>
+				.ark-install-box .ark-logo
+				{
+					width 		: auto;
+					height 		: auto;
+					margin 		: 0px;
+
+					color 		: #0099CC;
+					font-size 	: 70px;
+				}
+				.ark-install-box 				{ display : none; }
+				.com_installer .ark-install-box { display : block; }
+				.ark-install-box h1 			{ color : #333333; }
+			</style>
+			<link rel="stylesheet" href="../media/arkmedia/css/ark-logo.min.css" type="text/css" />
+			<i class="ark-logo icon-arkmedia"></i>
+			<h1>Welcome to the<br /> Ark Media Suite.</h1>
+			<h2>
+				<small>User Folder Support Added!</small>
+			</h2>
+			<a class="btn" href="index.php?option=com_plugins&view=plugins&filter_folder=arkmedia-feature"><i class="icon-publish text-success"></i> Enable Plugin</a>
+			<a class="btn" href="http://docs.arkextensions.com" target="_blank"><i class="icon-book"></i> Docs</a>
+		</div>
+		<div class="clearfix"></div>]]>
+	</description>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_arkmedia-feature_userfolders.ini</language>
+		<language tag="en-GB">en-GB.plg_arkmedia-feature_userfolders.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="userfolders">userfolders.php</filename>
+		<file>index.html</file>
+	</files>
+	<config addfieldpath="/administrator/components/com_arkmedia/models/fields">
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field 
+					name="active"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="PLG_ARKMEDIA-FEATURE_USERFOLDERS_XML_ACTIVE_LBL"
+					description="PLG_ARKMEDIA-FEATURE_USERFOLDERS_XML_ACTIVE_DESC"
+					filter="int">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field 
+					name="type"
+					type="list"
+					default="username"
+					label="PLG_ARKMEDIA-FEATURE_USERFOLDERS_XML_TYPE_LBL"
+					description="PLG_ARKMEDIA-FEATURE_USERFOLDERS_XML_TYPE_DESC"
+					filter="word">
+						<option value="id">PLG_ARKMEDIA-FEATURE_USERFOLDERS_XML_TYPE_OPT1</option>
+						<option value="username">PLG_ARKMEDIA-FEATURE_USERFOLDERS_XML_TYPE_OPT2</option>
+				</field>
+
+				<field 
+					name="whitelist" 
+					type="UserGroup"
+					default=""
+					size="5"
+					multiple="true"
+					label="PLG_ARKMEDIA-FEATURE_USERFOLDERS_XML_WHITELIST_LBL"
+					description="PLG_ARKMEDIA-FEATURE_USERFOLDERS_XML_WHITELIST_DESC"
+					filter="array"
+				/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

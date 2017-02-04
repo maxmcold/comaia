@@ -1,0 +1,4 @@
+/*In case, some website template overwrites the css*/
+.lightbox .lb-image {
+    max-width: inherit !important;
+}

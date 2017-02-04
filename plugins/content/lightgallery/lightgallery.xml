@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="content" method="upgrade">
+	<name>Light Gallery</name>
+	<author>The Joompolitan Team</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright © 2014 - All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>james.liu668@gmail.com</authorEmail>
+	<authorUrl>http://www.joompolitan.com</authorUrl>
+	<version>2.0.0</version>
+	<description></description>    
+	<files>
+		<filename plugin="lightgallery">lightgallery.php</filename>
+		<folder>css</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>temp</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="useJquery" type="radio" label="Use Self jQuery" default="1" description="Set 'No' if your website template already use jQuery">
+					<option value="0">No</option>			
+					<option value="1">Yes</option>
+				</field>
+                
+				<field name="websiteBaseURL" type="text" label="Website Root URL" default="" description="Your joomla website root url. For example: http://www.myjoomla.com" size="50"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

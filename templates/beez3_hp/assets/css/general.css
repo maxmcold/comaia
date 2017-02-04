@@ -1,0 +1,159 @@
+body {
+  font-family: 'Lato', sans-serif; }
+
+.font-light {
+  font-weight: lighter; }
+
+.font-normal {
+  font-weight: normal; }
+
+.font-bold {
+  font-weight: bold; }
+
+#slider img {
+  width: 100%; }
+
+#brand {
+  width: 90%;
+  padding-top: 20px;
+  padding-bottom: 40px; }
+  #brand h1 {
+    font-size: 20px; }
+  #brand .partner {
+    padding: 20px; }
+    #brand .partner img {
+      width: 150px;
+      display: block;
+      margin: 0 auto; }
+	  #brand .partner2 img {
+      width: 120px;
+      display: block;
+      margin: 0 auto; }
+
+#azienda {
+  margin-bottom:48px;
+  }
+  #azienda .azienda-testo {
+    padding-top: 25px; }
+  #azienda .spazio-int {
+    padding: 13px 20px 30px 20px; }
+  #azienda h1 {
+    font-size: 18px;
+    color: #353738; }
+  #azienda p {
+    color: #848789;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify; }
+  #azienda a {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    width: 30%;
+    color: #353738; }
+
+	#mappa {
+  margin-bottom:48px;
+  }
+.navbar {
+  margin: 0;
+  padding: 0; }
+
+.navbar-brand {
+  position: absolute;
+/*  background: #fff; */
+  z-index: 1000;
+  padding: 10px;
+  height: 80px;
+  display: block;
+/*  border: 1px solid #353738; */ }
+  .navbar-brand img {
+    width: 250px;
+    margin-top: 0px; }
+  
+ 
+ .navbar-brand img {
+    /* width: 250px; */
+    margin-top: -10px; }
+
+
+.menu {
+  text-transform: uppercase; }
+  .menu a {
+    color: #353738;
+    font-weight: bold; }
+
+footer {
+  background: #2c486a;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  footer ul {
+    list-style: none; }
+    footer ul li {
+      color: #fff; }
+      footer ul li a {
+        color: #fff; }
+        footer ul li a:hover {
+          color: #ced0d1;
+          text-decoration: none; }
+
+.social-bar img {
+  width: 40px;
+  margin-top: 8px; }
+
+.cover {
+  width: 100% !important; }
+
+.divisore {
+  background: #dbdddd;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.area-testo {
+  padding-top: 20px;
+  padding-bottom: 40px; }
+
+@media screen and (max-width: 959px) {
+  .allinea-sinistra {
+    text-align: center !important;
+    padding: 0; }
+    .allinea-sinistra ul {
+      padding: 0; }
+    .allinea-sinistra li {
+      padding: 20px;
+      border-top: 1px solid #fff; }
+
+  .navbar-toggle {
+    border: 1px solid #353738; }
+    .navbar-toggle span {
+      background: #353738; }
+
+  .navbar-brand {
+    height: 45px !important;
+    border: none;
+    padding: 5px;
+    position: inherit !important; }
+    .navbar-brand img {
+      width: auto !important;
+      margin-top: 0 !important; }
+
+  .navbar-nav li {
+    text-align: center;
+    border-top: 1px solid #353738; } }
+.no-padding {
+  padding: 0 !important; }
+
+.no-margin {
+  margin: 0 !important; }
+
+/*# sourceMappingURL=general.css.map */
+
+/* GIANL */
+
+.blog .row-0, .blog .row-2, .blog .row-4, .blog .row-6, .blog .row-8, .blog .row-10 { background-color: #FFF; }
+.blog .row-1, .blog .row-3, .blog .row-5, .blog .row-7, .blog .row-9 { background-color: #CCC; }
+
+/* nascondo edit su frontend */
+ul.actions {display:none}
+
+/* GIANL fine */

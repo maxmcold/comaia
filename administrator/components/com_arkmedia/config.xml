@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/administrator/components/com_arkmedia/models/fields">
+
+	<fieldset name="basic" label="COM_ARKMEDIA_XML_CONFIG_BASIC_TTL" description="COM_ARKMEDIA_XML_CONFIG_BASIC_DESC">
+
+		<field 
+			name="spacer-folders"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_FOLDERS_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_FOLDERS_DESC" />
+
+		<field 
+			name="folder-default"
+			type="ark.stacks"
+			label="COM_ARKMEDIA_XML_CONFIG_FOLDERDEFAULT_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_FOLDERDEFAULT_DESC"
+			filter="string" />
+
+		<field 
+			name="folder-locations"
+			type="ark.stacklocations"
+			label="COM_ARKMEDIA_XML_CONFIG_FOLDERLOCATIONS_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_FOLDERLOCATIONS_DESC"
+			filter="array" />
+
+		<field 
+			name="stack-status"
+			type="ark.stackstatus"
+			icon="warning"
+			class="alert"
+			style="margin-bottom : 0px;"
+			message="COM_ARKMEDIA_XML_CONFIG_STACKSTATUS_MSG" />
+
+	</fieldset>
+
+	<fieldset name="file" label="COM_ARKMEDIA_XML_CONFIG_FILE_TTL" description="COM_ARKMEDIA_XML_CONFIG_FILE_DESC">
+
+		<field 
+			name="spacer-filesize"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_FILESIZE_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_FILESIZE_DESC" />
+
+		<field 
+			name="upload-max"
+			type="ark.maxupload"
+			label="COM_ARKMEDIA_XML_CONFIG_UPLOADMAX_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_UPLOADMAX_DESC"
+			suffix="COM_ARKMEDIA_XML_CONFIG_UPLOADMAX_SUFFIX"
+			filter="int" />
+
+		<field 
+			name="spacer-filetype"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_FILETYPE_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_FILETYPE_DESC" />
+
+		<field 
+			name="allowed-types"
+			type="ark.stackfiletypes"
+			multiple="true"
+			label="COM_ARKMEDIA_XML_CONFIG_ALLOWEDTYPES_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_ALLOWEDTYPES_DESC"
+			filter="array">
+				<!-- IMAGES -->
+				<group label="COM_ARKMEDIA_TTL_IMAGES">
+					<!-- Lossy -->
+					<option value="image/jpg,[jpg,jpeg]">.jpg</option>
+					<!-- Lossless -->
+					<option value="image/png,png">.png</option>
+					<option value="image/gif,gif">.gif</option>
+					<option value="image/bmp,bmp">.bmp</option>
+					<option value="image/svg+xml,svg">.svg</option>
+					<option value="image/x-icon,ico">.ico</option>
+					<!-- Either -->
+					<option value="image/tiff,[tif,tiff]">.tiff</option>
+				</group>
+				<!-- AUDIOS -->
+				<group label="COM_ARKMEDIA_TTL_AUDIOS">
+					<!-- Lossy -->
+					<option value="audio/mpeg,mp3">.mp3</option>
+					<option value="audio/x-ms-wma,aac">.aac</option>
+					<option value="audio/ogg,ogg">.ogg</option>
+					<option value="audio/x-ms-wma,wma">.wma</option>
+					<!-- Lossless -->
+					<option value="audio/x-wav,wav">.wav</option>
+					<option value="audio/x-aiff,aiff">.aiff</option>
+					<option value="audio/mp4,[m4a,mp4a]">.m4a</option><!-- Apple Lossless -->
+					<option value="audio/x-flac,flac">.flac</option><!-- Free Lossless -->
+					<option value="audio/midi,mid">.mid</option>
+				</group>
+				<!-- VIDEOS -->
+				<group label="COM_ARKMEDIA_TTL_VIDEOS">
+					<option value="application/x-shockwave-flash,swf">.swf</option>
+					<option value="video/x-flv,flv">.flv</option>
+					<option value="video/x-msvideo,avi">.avi</option>
+					<option value="video/mp4,mp4">.mp4</option>
+					<option value="video/x-m4v,m4v">.m4v</option>
+					<option value="video/x-ms-wmv,wmv">.wmv</option>
+					<option value="video/quicktime,mov">.mov</option>
+					<option value="video/mpeg,[mpg,mpeg]">.mpeg</option>
+					<option value="video/x-ms-asf,asf">.asf</option>
+				</group>
+				<!-- DOCUMENTS -->
+				<group label="COM_ARKMEDIA_TTL_DOCUMENTS">
+					<option value="text/plain,txt">.txt</option>
+					<option value="text/rtf,rtf">.rtf</option>
+					<option value="application/x-zip,[zip,tar,tar.gz,tgz,gzip,tar.bz2,7z]">.zip</option>
+					<option value="application/pdf,pdf">.pdf</option>
+					<option value="application/x-shockwave-flash,swf">.swf</option>
+					<option value="application/x-shockwave-flash,fla">.fla</option>
+					<option value="application/msword,[doc,docx]">.doc</option>
+					<option value="application/excel,[xls,xlsx,csv]">.xls</option>
+					<option value="application/powerpoint,[ppt,pptx]">.ppt</option>
+					<option value="application/vnd.oasis.opendocument.presentation,odp">.odp</option>
+					<option value="application/vnd.oasis.opendocument.text,odt">.odt</option>
+					<option value="application/vnd.oasis.opendocument.spreadsheet,ods">.ods</option>
+					<option value="application/vnd.oasis.opendocument.graphics,odg">.odg</option>
+					<option value="text/html,html">.html</option>
+					<option value="application/xhtml+xml,xhtml">.xhtml</option>
+					<option value="application/xml,xml">.xml</option>
+					<option value="application/x-font-ttf,ttf">.ttf</option>
+					<option value="application/x-font-woff,woff">.woff</option>
+					<option value="application/x-font-otf,otf">.otf</option>
+					<option value="application/vnd.ms-fontobject,eot">.eot</option>
+				</group>
+				<!-- 
+					@todo: Add Grouping of Mime Logic: aka <opt value="[text/plain,text/rtf],[txt,rtf]">Text Formats</opt> (must also get working for custom types too)
+					@todo: support these? old explorer does...
+					$extension_whitelist = "mpc,pxd,qt,ram,rar,rm,rmi,rmvb,sdc,sitd,sxc,sxw,vsd,xcf";
+					@todo: Add select all/unselect all/select all images etc..
+					@todo: Convert the Values to single quote JSON? Rather Than Custom Format?
+					@todo: Add Ability to Prioritise Groups to the Top? E.g. Audio at Top for Audio List?
+				-->
+		</field>
+
+		<field 
+			name="custom-allowed-types"
+			type="ark.repeatablefix"
+			multiple="true"
+			label="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_DESC">
+				<fieldset name="custom-allowed-types_modal" hidden="true" repeat="true">
+					<field 
+						name="custom-allowed-types-mime" 
+						type="text" 
+						class="input-small" 
+						hint="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT1_HINT" 
+						label="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT1_LBL" 
+						description="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT1_DESC"
+						filter="word" />
+					<field 
+						name="custom-allowed-types-ext" 
+						type="text" 
+						class="input-small" 
+						hint="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT2_HINT" 
+						label="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT2_LBL" 
+						description="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT2_DESC"
+						filter="word" />
+					<field 
+						name="custom-allowed-types-folder"
+						type="ark.stacks"
+						multiple="true"
+						data-placeholder="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT3_HINT"
+						label="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT3_LBL"
+						description="COM_ARKMEDIA_XML_CONFIG_CUSTOMALLOWEDTYPES_OPT3_DESC"
+						filter="string" />
+				</fieldset>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="interface" label="COM_ARKMEDIA_XML_CONFIG_INTERFACE_TTL" description="COM_ARKMEDIA_XML_CONFIG_INTERFACE_DESC">
+
+		<field 
+			name="spacer-explorer"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_EXPLORER_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_EXPLORER_DESC" />
+
+		<field 
+			name="root-folder"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_ARKMEDIA_XML_CONFIG_ROOTFOLDER_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_ROOTFOLDER_DESC"
+			filter="int">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+
+		<field 
+			name="folder-count"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_ARKMEDIA_XML_CONFIG_FOLDERCOUNT_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_FOLDERCOUNT_DESC"
+			filter="int">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+
+		<!-- @depreciated field
+			<field name="explorer-scroll"></field>
+		-->
+
+		<field 
+			name="spacer-breadcrumbs"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_BREADCRUMBS_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_BREADCRUMBS_DESC" />
+
+		<field 
+			name="breadcrumb-fullpath"
+			type="radio"
+			default="0"
+			class="btn-group btn-group-yesno"
+			label="COM_ARKMEDIA_XML_CONFIG_BREADCRUMBFULLPATH_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_BREADCRUMBFULLPATH_DESC"
+			filter="int">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+
+		<field 
+			name="spacer-content"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_CONTENT_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_CONTENT_DESC" />
+
+		<field 
+			name="layout-default"
+			type="list"
+			default="mixed"
+			label="COM_ARKMEDIA_XML_CONFIG_LAYOUTDEFAULT_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_LAYOUTDEFAULT_DESC"
+			filter="word">
+				<option value="right">COM_ARKMEDIA_XML_CONFIG_LAYOUTDEFAULT_OPT1</option>
+				<option value="mixed">COM_ARKMEDIA_XML_CONFIG_LAYOUTDEFAULT_OPT2</option>
+				<option value="middle">COM_ARKMEDIA_XML_CONFIG_LAYOUTDEFAULT_OPT3</option>
+		</field>
+
+		<field 
+			name="view-default"
+			type="list"
+			default="grid"
+			label="COM_ARKMEDIA_XML_CONFIG_VIEWDEFAULT_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_VIEWDEFAULT_DESC"
+			filter="word">
+				<option value="grid">COM_ARKMEDIA_XML_CONFIG_VIEWDEFAULT_OPT1</option>
+				<option value="list">COM_ARKMEDIA_XML_CONFIG_VIEWDEFAULT_OPT2</option>
+				<option value="date">COM_ARKMEDIA_XML_CONFIG_VIEWDEFAULT_OPT3</option>
+		</field>
+
+		<field 
+			name="view-list"
+			type="ark.listmultiple"
+			default="grid"
+			multiple="true"
+			data-no_results_text="COM_ARKMEDIA_XML_CONFIG_VIEWLIST_CUSTOM"
+			data-placeholder="COM_ARKMEDIA_XML_CONFIG_VIEWLIST_HINT"
+			label="COM_ARKMEDIA_XML_CONFIG_VIEWLIST_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_VIEWLIST_DESC"
+			filter="array">
+				<option value="grid">COM_ARKMEDIA_XML_CONFIG_VIEWDEFAULT_OPT1</option>
+				<option value="list">COM_ARKMEDIA_XML_CONFIG_VIEWDEFAULT_OPT2</option>
+				<option value="date">COM_ARKMEDIA_XML_CONFIG_VIEWDEFAULT_OPT3</option>
+		</field>
+
+		<field 
+			name="confirm-delete"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_ARKMEDIA_XML_CONFIG_CONFIRMDELETE_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_CONFIRMDELETE_DESC"
+			filter="int">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+
+		<field 
+			name="enable-thumbnails"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_ARKMEDIA_XML_CONFIG_ENABLETHUMBNAILS_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_ENABLETHUMBNAILS_DESC"
+			filter="int">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+
+		<field 
+			name="spacer-edit"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_EDIT_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_EDIT_DESC" />
+
+		<field 
+			name="class-default"
+			type="text"
+			label="COM_ARKMEDIA_XML_CONFIG_CLASSDEFAULT_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_CLASSDEFAULT_DESC"
+			filter="string" />
+
+		<field 
+			name="style-default"
+			type="text"
+			label="COM_ARKMEDIA_XML_CONFIG_STYLEDEFAULT_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_STYLEDEFAULT_DESC"
+			filter="string" />
+
+		<field 
+			name="class-list"
+			type="ark.listmultiple"
+			default="*"
+			multiple="true"
+			custom="true"
+			data-no_results_text="COM_ARKMEDIA_XML_CONFIG_CLASSLIST_CUSTOM"
+			data-placeholder="COM_ARKMEDIA_XML_CONFIG_CLASSLIST_HINT"
+			label="COM_ARKMEDIA_XML_CONFIG_CLASSLIST_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_CLASSLIST_DESC"
+			filter="array">
+				<option value="pull-left">pull-left</option>
+				<option value="pull-right">pull-right</option>
+				<option value="pull-center">pull-center</option>
+				<option value="screenshot-view">screenshot-view</option>
+				<option value="thumbnail">thumbnail</option>
+				<option value="fade_in">fade_in</option>
+				<option value="img-rounded">img-rounded</option>
+				<option value="img-polaroid">img-polaroid</option>
+				<option value="img-circle">img-circle</option>
+		</field>
+
+		<field 
+			name="style-list"
+			type="ark.listmultiple"
+			default="*"
+			multiple="true"
+			custom="true"
+			data-no_results_text="COM_ARKMEDIA_XML_CONFIG_STYLELIST_CUSTOM"
+			data-placeholder="COM_ARKMEDIA_XML_CONFIG_STYLELIST_HINT"
+			label="COM_ARKMEDIA_XML_CONFIG_STYLELIST_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_STYLELIST_DESC"
+			filter="array">
+				<option value="float : left;">float : left;</option>
+				<option value="float : right;">float : right;</option>
+				<option value="width : 100%;">width : 100%;</option>
+				<option value="margin-left : 5px;">margin-left : 5px;</option>
+				<option value="margin-right : 5px;">margin-right : 5px;</option>
+				<option value="display : block;">display : block;</option>
+				<option value="display : inline;">display : inline;</option>
+				<option value="opacity : 0.8;">opacity : 0.8;</option>
+				<option value="border : 1px solid #333333;">border : 1px solid #333333;</option>
+				<option value="border-radius : 5px;">border-radius : 5px;</option>
+				<option value="background-color : transparent;">background-color : transparent;</option>
+				<option value="box-shadow : 0px 1px 2px #cccccc;">box-shadow : 0px 1px 2px #cccccc;</option>
+		</field>
+
+		<field 
+			name="data-list"
+			type="ark.listmultiple"
+			default=""
+			multiple="true"
+			custom="true"
+			data-no_results_text="COM_ARKMEDIA_XML_CONFIG_DATALIST_CUSTOM"
+			data-placeholder="COM_ARKMEDIA_XML_CONFIG_DATALIST_HINT"
+			label="COM_ARKMEDIA_XML_CONFIG_DATALIST_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_DATALIST_DESC"
+			filter="array">
+		</field>
+
+		<field 
+			name="data-bootstrap2"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_ARKMEDIA_XML_CONFIG_DATABOOTSTRAP2_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_DATABOOTSTRAP2_DESC"
+			filter="int">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+
+		<field 
+			name="data-uikit"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_ARKMEDIA_XML_CONFIG_DATAUIKIT_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_DATAUIKIT_DESC"
+			filter="int">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="system" label="COM_ARKMEDIA_XML_CONFIG_SYSTEM_TTL" description="COM_ARKMEDIA_XML_CONFIG_SYSTEM_DESC">
+
+		<field 
+			name="spacer-cache"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_CACHE_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_CACHE_DESC" />
+
+		<field 
+			name="system-caching"
+			type="radio"
+			default="1"
+			class="btn-group"
+			label="COM_ARKMEDIA_XML_CONFIG_SYSTEMCACHING_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_SYSTEMCACHING_DESC"
+			filter="int">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				<option value="2">JGLOBAL_USE_GLOBAL</option>
+		</field>
+
+		<!-- @depreciated field
+			<field name="file-concatenation"></field>
+		-->
+
+		<!-- @depreciated field
+			<field name="proxy-thumbnails"></field>
+		-->
+
+		<field 
+			name="spacer-filters"
+			type="spacer"
+			label="COM_ARKMEDIA_XML_CONFIG_FILTERS_TTL"
+			description="COM_ARKMEDIA_XML_CONFIG_FILTERS_DESC" />
+
+		<field 
+			name="filter-ascii"
+			type="radio"
+			default="1"
+			class="btn-group"
+			label="COM_ARKMEDIA_XML_CONFIG_FILTERASCII_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_FILTERASCII_DESC"
+			filter="int">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+
+		<field 
+			name="filter-filename"
+			type="ark.listmultiple"
+			default="*"
+			multiple="true"
+			custom="true"
+			data-no_results_text="COM_ARKMEDIA_XML_CONFIG_FILTERFILENAME_CUSTOM"
+			data-placeholder="COM_ARKMEDIA_XML_CONFIG_FILTERFILENAME_HINT"
+			label="COM_ARKMEDIA_XML_CONFIG_FILTERFILENAME_LBL"
+			description="COM_ARKMEDIA_XML_CONFIG_FILTERFILENAME_DESC"
+			filter="array">
+				<option value="\">\</option>
+				<option value="/">/</option>
+				<option value=":">:</option>
+				<option value="^">^</option>
+				<option value="[quot]">&quot;</option>
+				<option value="*">*</option>
+				<option value="|">|</option>
+				<option value="?">?</option>
+				<option value="[gt]">&gt;</option>
+				<option value="[lt]">&lt;</option>
+				<option value=" ">Space</option>
+		</field>
+
+		<field 
+			name="version"
+			type="ark.version"
+			tag="div"
+			changelog="http://changelogs.arkextensions.com"
+			help="http://help.arkextensions.com"
+			docs="http://docs.arkextensions.com"
+			class="text-muted muted"
+			/>
+
+	</fieldset>
+
+	<fieldset name="plugins" label="COM_ARKMEDIA_XML_CONFIG_PLUGINS_TTL" description="COM_ARKMEDIA_XML_CONFIG_PLUGINS_DESC">
+
+		<field 
+			name="static-plugins"
+			type="ark.pluginlinks"
+			prefix="COM_ARKMEDIA_XML_CONFIG_STATICPLUGINS" />
+
+	</fieldset>
+
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+
+		<field 
+			name="rules" 
+			type="rules"
+			component="com_arkmedia"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+
+	</fieldset>
+
+</config>

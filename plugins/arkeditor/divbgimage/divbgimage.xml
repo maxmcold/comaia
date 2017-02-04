@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="arkeditor" method="upgrade">
+	<name>ArkEditor - Div backgrounds</name>
+	<author>Webx Solution Ltd</author>
+	<creationDate>Jan 2017</creationDate>
+	<copyright>>Copyright (C) 2017- 2019 All rights reserved</copyright>
+	<license>GNU General Public License version 2</license>
+	<authorEmail>support@arkextensions.com</authorEmail>
+	<authorUrl>www.arkextensions.com</authorUrl>
+	<version>1.0</version>
+	<description>Allows you to insert background to Div Block elements</description>
+	<files>		<filename plugin="divbgimage">divbgimage.php</filename>
+		<filename>index.html</filename>		<folder>divbgimage</folder>
+	</files>
+</extension>

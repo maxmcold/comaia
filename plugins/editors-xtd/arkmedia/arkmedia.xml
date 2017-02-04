@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Button - Ark Media</name>
+	<creationDate>November 2014</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>WebxSolution Ltd</author>
+	<authorEmail>info@arkextensions.com</authorEmail>
+	<authorUrl>http://www.arkextensions.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<div class="ark-install-box well pull-left text-center">
+			<!-- Only Display on Installer Screen (not config screen), Colour Required for Tooltips -->
+			<style>
+				.ark-install-box .ark-logo
+				{
+					width 		: auto;
+					height 		: auto;
+					margin 		: 0px;
+
+					color 		: #0099CC;
+					font-size 	: 70px;
+				}
+				.ark-install-box 				{ display : none; }
+				.com_installer .ark-install-box { display : block; }
+				.ark-install-box h1 			{ color : #333333; }
+			</style>
+			<link rel="stylesheet" href="../media/arkmedia/css/ark-logo.min.css" type="text/css" />
+			<i class="ark-logo icon-arkmedia"></i>
+			<h1>Welcome to the<br /> Ark Media Suite.</h1>
+			<h2>
+				<small>Editor Button Added!</small>
+			</h2>
+			<a class="btn" href="index.php?option=com_plugins&view=plugins&filter_folder=editors-xtd"><i class="icon-publish text-success"></i> Enable Plugin</a>
+			<a class="btn" href="http://docs.arkextensions.com" target="_blank"><i class="icon-book"></i> Docs</a>
+		</div>
+		<div class="clearfix"></div>]]>
+	</description>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_editors-xtd_arkmedia.ini</language>
+		<language tag="en-GB">en-GB.plg_editors-xtd_arkmedia.sys.ini</language>
+	</languages>
+	<files>
+		<folder>js</folder>
+		<folder>layouts</folder>
+		<filename plugin="arkmedia">arkmedia.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config addfieldpath="/administrator/components/com_arkmedia/models/fields">
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field 
+					name="icon" 
+					type="text"
+					default="arkmedia"
+					label="PLG_EDITORS-XTD_ARKMEDIA_XML_ICON_LBL"
+					description="PLG_EDITORS-XTD_ARKMEDIA_XML_ICON_DESC"
+					filter="string"
+				/>
+
+				<field 
+					name="colour"
+					type="list"
+					default="primary"
+					label="PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_LBL"
+					description="PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_DESC"
+					filter="word">
+						<option value="primary">PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_OPT1</option>
+						<option value="default">PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_OPT2</option>
+						<option value="success">PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_OPT3</option>
+						<option value="info">PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_OPT4</option>
+						<option value="warning">PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_OPT5</option>
+						<option value="danger">PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_OPT6</option>
+						<option value="link">PLG_EDITORS-XTD_ARKMEDIA_XML_COLOUR_OPT7</option>
+				</field>
+
+				<field 
+					name="text" 
+					type="text"
+					default="Add Media"
+					filter="string"
+					label="PLG_EDITORS-XTD_ARKMEDIA_XML_TEXT_LBL"
+					description="PLG_EDITORS-XTD_ARKMEDIA_XML_TEXT_DESC"
+				/>
+
+				<!-- Name Must Be Same As Config Value to Allow for Opt-Outs -->
+				<field 
+					name="folder-default"
+					type="ark.stacks"
+					label="PLG_EDITORS-XTD_ARKMEDIA_XML_STACK_LBL"
+					description="PLG_EDITORS-XTD_ARKMEDIA_XML_STACK_DESC"
+					filter="string">
+						<option value="">PLG_EDITORS-XTD_ARKMEDIA_XML_STACK_OPT1</option>
+				</field>
+
+				<field 
+					name="disable-default"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="PLG_EDITORS-XTD_ARKMEDIA_XML_DISABLEDEFAULT_LBL"
+					description="PLG_EDITORS-XTD_ARKMEDIA_XML_DISABLEDEFAULT_DESC"
+					filter="int">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field 
+					name="window-dimensions"
+					type="list"
+					default="auto"
+					class="btn-group"
+					label="PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWDIMENSIONS_LBL"
+					description="PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWDIMENSIONS_DESC"
+					filter="word">
+						<option value="auto">PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWDIMENSIONS_OPT1</option>
+						<option value="calc">PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWDIMENSIONS_OPT2</option>
+						<option value="custom">PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWDIMENSIONS_OPT3</option>
+				</field>
+
+				<field 
+					name="window-x" 
+					type="text"
+					default=""
+					hint="PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWX_HINT"
+					label="PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWX_LBL"
+					description="PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWX_DESC"
+					filter="int"
+				/>
+
+				<field 
+					name="window-y" 
+					type="text"
+					default=""
+					hint="PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWY_HINT"
+					label="PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWY_LBL"
+					description="PLG_EDITORS-XTD_ARKMEDIA_XML_WINDOWY_DESC"
+					filter="int"
+				/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

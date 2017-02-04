@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_arkmedia">
+	<section name="component">
+		<!-- Basic Access -->
+		<action name="core.admin" default="7" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_CORE_CONFIGURE_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_CORE_CONFIGURE_DESC" />
+		<action name="core.manage" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_CORE_MANAGE_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_CORE_MANAGE_DESC" />
+
+		<!-- Action Performing -->
+		<action name="ark.action.edit" default="6,4" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_EDIT_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_EDIT_DESC" />
+		<action name="ark.action.copy" default="6,3" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_COPY_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_COPY_DESC" />
+		<action name="ark.action.move" default="6,5" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_MOVE_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_MOVE_DESC" />
+		<action name="ark.action.remove" default="6,5" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_REMOVE_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_REMOVE_DESC" />
+		<action name="ark.action.rename" default="6,4" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_RENAME_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_RENAME_DESC" />
+		<action name="ark.action.upload" default="6,3" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_UPLOAD_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_UPLOAD_DESC" />
+		<action name="ark.action.folder" default="6,3" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_FOLDER_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_FOLDER_DESC" />
+		<action name="ark.action.search" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_SEARCH_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_ACTION_SEARCH_DESC" />
+
+		<!-- Interface Access -->
+		<action name="ark.ui.resize" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_RESIZE_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_RESIZE_DESC" />
+		<action name="ark.ui.views" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_VIEWS_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_VIEWS_DESC" />
+		<action name="ark.ui.refresh" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_REFRESH_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_REFRESH_DESC" />
+		<action name="ark.ui.help" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_HELP_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_HELP_DESC" />
+		<action name="ark.ui.bug" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_BUG_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_UI_BUG_DESC" />
+
+		<!-- Insertion Access -->
+		<action name="ark.insert.manage" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_INSERT_MANAGE_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_INSERT_MANAGE_DESC" />
+		<action name="ark.insert.settings" default="2,6" title="COM_ARKMEDIA_XML_CONFIG_ACCESS_INSERT_SETTINGS_TTL" description="COM_ARKMEDIA_XML_CONFIG_ACCESS_INSERT_SETTINGS_DESC" />
+	</section>
+</access>

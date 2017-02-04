@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<!-- @todo	Separate Out Permission for Each Fieldset Into Individual Permissions: e.g. ark.insert.settings.description, ark.insert.settings.advanced etc? -->
+	<!-- data-link 		= For Linking the Element's Attributes to the Edit/Settings Form -->
+	<!-- data-attribute = For Linking the Edit/Settings Form's Data Back to the Element's Attributes -->
+	<!-- data-converter = For Determining How the Element's Value is Matched to the Field (full|list-full|list-regex|CUSTOM) -->
+	<!-- data-separator = For Determining How Multiple Values are Returned to the Element on Insert (e.g. CSV, default = Space) -->
+	<!-- data-omissions = Some Fields Allow a CSV to Exclude Certain User/System Inputted Values From Being Added/Displayed -->
+	<fieldset name="settings" labels="true" columns="[4,4,4,4]:[8,8,8,8]" icon="settings" label="COM_ARKMEDIA_XML_EDIT_SETTINGS_TTL" description="COM_ARKMEDIA_XML_EDIT_SETTINGS_DESC" permission="ark.insert.settings">
+
+		<!-- Load Plugin Overrides in edit.xml => <fieldset name="settings"> -->
+
+	</fieldset>
+	<fieldset name="link" labels="true" columns="[4,4,4,4]:[8,8,8,8]" icon="link" label="COM_ARKMEDIA_XML_EDIT_LINK_TTL" description="COM_ARKMEDIA_XML_EDIT_LINK_DESC" permission="ark.insert.settings">
+
+		<!-- Load Plugin Overrides in edit.xml => <fieldset name="link"> -->
+
+	</fieldset>
+	<fieldset name="description" labels="true" columns="[4,4,4,4]:[8,8,8,8]" icon="paragraph-left2" label="COM_ARKMEDIA_XML_EDIT_DESCRIPTION_TTL" description="COM_ARKMEDIA_XML_EDIT_DESCRIPTION_DESC" permission="ark.insert.settings">
+
+		<field 
+			name="title"
+			type="ark.extendedtext"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.title}"
+			data-attribute="title"
+			label="COM_ARKMEDIA_XML_EDIT_DESCRIPTION_TITLE_LBL"
+			description="COM_ARKMEDIA_XML_EDIT_DESCRIPTION_TITLE_DESC" />
+
+		<!-- Load Plugin Overrides in edit.xml => <fieldset name="description"> -->
+
+	</fieldset>
+	<fieldset name="advanced" labels="true" columns="[4,4,4,4]:[8,8,8,8]" icon="wrench" label="COM_ARKMEDIA_XML_EDIT_ADVANCED_TTL" description="COM_ARKMEDIA_XML_EDIT_ADVANCED_DESC" permission="ark.insert.settings">
+
+		<field 
+			name="id"
+			type="ark.extendedtext"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.id}"
+			data-attribute="id"
+			label="COM_ARKMEDIA_XML_EDIT_ADVANCED_ID_LBL"
+			description="COM_ARKMEDIA_XML_EDIT_ADVANCED_ID_DESC" />
+
+		<!-- @todo 	Move to Individual Plugins For Customised Type Specific Options -->
+		<field 
+			name="class"
+			type="ark.extendedcombo"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.class}"
+			data-attribute="class"
+			data-omissions="cke_widget_element"
+			options="config:class-list"
+			label="COM_ARKMEDIA_XML_EDIT_ADVANCED_CLASS_LBL"
+			description="COM_ARKMEDIA_XML_EDIT_ADVANCED_CLASS_DESC">
+		</field>
+
+		<field 
+			name="style"
+			type="ark.extendedcombo"
+			default=""
+			class="form-control input-sm menu-xs menu-wide"
+			data-link="{defaults:info.style}"
+			data-attribute="style"
+			options="config:style-list"
+			hint="COM_ARKMEDIA_XML_EDIT_ADVANCED_STYLE_HINT"
+			label="COM_ARKMEDIA_XML_EDIT_ADVANCED_STYLE_LBL"
+			description="COM_ARKMEDIA_XML_EDIT_ADVANCED_STYLE_DESC">
+		</field>
+
+		<field 
+			name="data"
+			type="ark.listmultiple"
+			default=""
+			class="form-control"
+			data-link="{listdefaults:info.data}"
+			data-attribute="data-*"
+			data-converter="attr-regex"
+			multiple="true"
+			custom="true"
+			html="true"
+			group-bootstrap2="config:data-bootstrap2"
+			group-uikit="config:data-uikit"
+			group-custom="1"
+			options="config:data-list"
+			data-omissions="data-cke-saved-src,data-cke-align,data-cke-widget-data,data-cke-widget-upcasted,data-cke-widget-keep-attr,data-widget"
+			data-configgroup="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_OPT4"
+			data-customgroup="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_OPT3"
+			data-no_results_text="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_CUSTOM"
+			data-placeholder="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_HINT"
+			label="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_LBL"
+			description="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_DESC">
+				<!-- Bootstrap -->
+				<group value="bootstrap2" label="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_OPT1">
+					<option>data-toggle="tooltip"</option>
+					<option>data-placement="bottom"</option>
+					<option>data-toggle="modal"</option>
+					<option>data-target="#id"</option>
+					<option>data-toggle="collapse"</option>
+					<option>data-toggle="dropdown"</option>
+					<option>data-toggle="tab"</option>
+					<option>data-toggle="pill"</option>
+					<option>data-dismiss="alert"</option>
+					<option>data-spy="scroll"</option>
+				</group>
+				<!-- UIKit -->
+				<group value="uikit" label="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_OPT2">
+					<option>data-uk-button</option>
+					<option>data-uk-button-radio</option>
+					<option>data-uk-button-checkbox</option>
+					<option>data-uk-dropdown</option>
+					<option>data-uk-dropdown="{mode:'click'}"</option>
+					<option>data-uk-tab</option>
+					<option>data-uk-grid-match</option>
+					<option>data-uk-grid-margin</option>
+					<option>data-uk-margin</option>
+					<option>data-uk-alert</option>
+					<option>data-uk-modal</option>
+					<option>data-uk-smooth-scroll</option>
+					<option>data-uk-switcher="{connect:'#id'}"</option>
+					<option>data-uk-toggle="{target:'#id'}"</option>
+					<!-- Too Long & Unsightly!
+					<option>data-uk-scrollspy="{cls:'uk-animation-fade'}"</option>
+					-->
+				</group>
+				<!-- Config Group is Added by Config List -->
+				<!-- Custom Group (populated on the fly in JS if element has custom attrs in editor) -->
+				<group value="content" label="COM_ARKMEDIA_XML_EDIT_ADVANCED_DATA_OPT3">
+				</group>
+		</field>
+
+		<!-- Load Plugin Overrides in edit.xml => <fieldset name="advanced"> -->
+
+	</fieldset>
+</form>

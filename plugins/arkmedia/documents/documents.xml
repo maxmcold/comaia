@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="arkmedia" method="upgrade">
+	<name>Ark Media - Documents</name>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>WebxSolution Ltd</author>
+	<authorEmail>info@arkextensions.com</authorEmail>
+	<authorUrl>http://www.arkextensions.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<div class="ark-install-box well pull-left text-center">
+			<!-- Only Display on Installer Screen (not config screen), Colour Required for Tooltips -->
+			<style>
+				.ark-install-box .ark-logo
+				{
+					width 		: auto;
+					height 		: auto;
+					margin 		: 0px;
+
+					color 		: #0099CC;
+					font-size 	: 70px;
+				}
+				.ark-install-box 				{ display : none; }
+				.com_installer .ark-install-box { display : block; }
+				.ark-install-box h1 			{ color : #333333; }
+			</style>
+			<link rel="stylesheet" href="../media/arkmedia/css/ark-logo.min.css" type="text/css" />
+			<i class="ark-logo icon-arkmedia"></i>
+			<h1>Welcome to the<br /> Ark Media Suite.</h1>
+			<h2>
+				<small>Document Folders Added!</small>
+			</h2>
+			<a class="btn" href="index.php?option=com_plugins&view=plugins&filter_folder=arkmedia"><i class="icon-publish text-success"></i> Enable Plugin</a>
+			<a class="btn" href="http://docs.arkextensions.com" target="_blank"><i class="icon-book"></i> Docs</a>
+		</div>
+		<div class="clearfix"></div>]]>
+	</description>
+	<scriptfile>script.php</scriptfile>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_arkmedia_documents.ini</language>
+		<language tag="en-GB">en-GB.plg_arkmedia_documents.sys.ini</language>
+	</languages>
+	<files>
+		<folder>css</folder>
+		<folder>forms</folder>
+		<folder>js</folder>
+		<folder>layouts</folder>
+		<filename plugin="documents">documents.php</filename>
+		<file>index.html</file>
+	</files>
+	<config addfieldpath="/administrator/components/com_arkmedia/models/fields">
+		<fields name="params">
+			<fieldset name="basic">
+
+				<!-- These Parameters Correlate With the Component's Config Counterpart Parameter. -->
+				<!-- Their Purpose is to set Stack Specific Defaults to Each Component Config Option -->
+				<field 
+					name="folder-locations" 
+					type="hidden"
+					default="files/docs"
+					filter="path"
+					required="required"
+				/>
+
+				<field 
+					name="allowed-types" 
+					type="ark.multiplehidden"
+					filter="array"
+					required="required">
+						<option value="text/plain,txt" />
+						<option value="text/rtf,rtf" />
+						<option value="application/x-zip,[zip,tar,tar.gz,tgz,gzip,tar.bz2,7z]" />
+						<option value="application/pdf,pdf" />
+						<option value="application/x-shockwave-flash,swf" />
+						<option value="application/x-shockwave-flash,fla" />
+						<option value="application/msword,[doc,docx]" />
+						<option value="application/excel,[xls,xlsx,csv]" />
+						<option value="application/powerpoint,[ppt,pptx]" />
+						<option value="application/vnd.oasis.opendocument.presentation,odp" />
+						<option value="application/vnd.oasis.opendocument.text,odt" />
+						<option value="application/vnd.oasis.opendocument.spreadsheet,ods" />
+						<option value="application/vnd.oasis.opendocument.graphics,odg" />
+						<option value="text/html,html" />
+						<option value="application/xhtml+xml,xhtml" />
+						<option value="application/xml,xml" />
+						<option value="application/x-font-ttf,ttf" />
+						<option value="application/x-font-woff,woff" />
+						<option value="application/x-font-otf,otf" />
+						<option value="application/vnd.ms-fontobject,eot" />
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="views" bootstrap="true" labels="false">
+
+		<field 
+			name="grid" 
+			type="ark.collapsebutton"
+			text=""
+			tag="radio"
+			group="views"
+			size="small"
+			permission="ark.ui.views"
+			omit="config:view-list"
+			active="config:view-default:grid"
+			target="[data-view='grid']"
+			title="COM_ARKMEDIA_XML_ACTIONS_GRID_LBL"
+			icon="th">
+				<option	key="data" subkey="value" value="grid" />
+				<option
+					key="prefixes"
+					subkey="icon"
+					value="glyphicon glyphicon-" />
+		</field>
+
+		<field 
+			name="list" 
+			type="ark.collapsebutton"
+			text=""
+			tag="radio"
+			group="views"
+			size="small"
+			permission="ark.ui.views"
+			omit="config:view-list"
+			active="config:view-default"
+			target="[data-view='list']"
+			title="COM_ARKMEDIA_XML_ACTIONS_LIST_LBL"
+			icon="glyphicon glyphicon-th-list">
+				<option	key="data" subkey="value" value="list" />
+				<option
+					key="prefixes"
+					subkey="icon"
+					value="glyphicon glyphicon-" />
+		</field>
+
+		<field 
+			name="date" 
+			type="ark.collapsebutton"
+			text=""
+			tag="radio"
+			group="views"
+			size="small"
+			permission="ark.ui.views"
+			omit="config:view-list"
+			active="config:view-default"
+			target="[data-view='date']"
+			title="COM_ARKMEDIA_XML_ACTIONS_DATE_LBL"
+			icon="glyphicon glyphicon-calendar">
+				<option	key="data" subkey="value" value="date" />
+				<option
+					key="prefixes"
+					subkey="icon"
+					value="glyphicon glyphicon-" />
+		</field>
+
+	</fieldset>
+	<fieldset name="upload" bootstrap="true" labels="false">
+
+		<field 
+			name="upload"
+			id="uploadtoggle"
+			type="ark.extendedbutton"
+			action="ark.action.upload"
+			text="COM_ARKMEDIA_XML_ACTIONS_UPLOAD_LBL"
+			icon="upload">
+				<option	key="data" subkey="toggle" value="collapse" />
+				<option	key="data" subkey="target" value="#action-upload" />
+		</field>
+
+	</fieldset>
+	<fieldset name="folder" bootstrap="true" labels="false">
+
+		<field 
+			name="folder"
+			id="foldertoggle"
+			type="ark.extendedbutton"
+			action="ark.action.folder"
+			text="COM_ARKMEDIA_XML_ACTIONS_FOLDER_LBL"
+			icon="plus">
+				<option	key="data" subkey="toggle" value="collapse" />
+				<option	key="data" subkey="target" value="#action-new-folder" />
+		</field>
+
+	</fieldset>
+	<fieldset name="delete" labels="false">
+
+		<field 
+			name="delete" 
+			type="ark.deletebutton" 
+			stackname="deletestack"
+			pathname="deletepath"
+			foldersname="deletefolders"
+			filesname="deletefiles"
+			action="ark.action.remove"
+			text="COM_ARKMEDIA_XML_ACTIONS_DELETE_LBL"
+			icon="remove" />
+
+	</fieldset>
+	<fieldset name="download" labels="false">
+
+		<field
+			name="downloadlayout"
+			type="ark.layout"
+			id="filedownload" 
+			layout="list.subactions.download"
+			text="COM_ARKMEDIA_XML_ACTIONS_DOWNLOAD_LBL"
+			icon="cloud-download"
+			disabled="true"
+			readonly="true" />
+
+	</fieldset>
+	<fieldset name="link" labels="false">
+
+		<field
+			name="linklayout"
+			type="ark.layout"
+			id="copylink" 
+			layout="list.subactions.link"
+			text="COM_ARKMEDIA_XML_ACTIONS_LINK_LBL"
+			icon="link"
+			disabled="true"
+			readonly="true" />
+
+	</fieldset>
+	<fieldset name="insert" labels="false" permission="ark.insert.manage">
+
+		<field 
+			name="insert" 
+			type="ark.insertbutton" 
+			colour="primary"
+			text="COM_ARKMEDIA_XML_ACTIONS_INSERT_LBL"
+			fulltext="COM_ARKMEDIA_XML_ACTIONS_EDIT_LBL"
+			fullicon="pencil"
+			basictext="COM_ARKMEDIA_XML_ACTIONS_PREVIEW_LBL"
+			basicicon="eye"
+			icon="download" />
+
+	</fieldset>
+	<fieldset name="inserting" labels="false" permission="ark.insert.manage">
+
+		<field 
+			name="inserting" 
+			type="ark.button" 
+			colour="primary"
+			html="true"
+			extra="var-hide"
+			title="COM_ARKMEDIA_XML_ACTIONS_INSERT_LBL"
+			text="COM_ARKMEDIA_XML_ACTIONS_INSERTING_LBL"
+			icon="spinner" >
+				<option	key="data" subkey="file" value="%s" />
+		</field>
+
+	</fieldset>
+</form>

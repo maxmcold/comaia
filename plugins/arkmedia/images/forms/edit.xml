@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="settings">
+
+		<field 
+			name="align"
+			type="ark.extendedlist"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.align}"
+			data-attribute="data-cke-align"
+			data-converter="list-full"
+			label="PLG_ARKMEDIA_IMAGES_XML_SETTINGS_ALIGN_LBL"
+			description="PLG_ARKMEDIA_IMAGES_XML_SETTINGS_ALIGN_DESC">
+				<option value="">PLG_ARKMEDIA_IMAGES_XML_SETTINGS_ALIGN_OPT1</option>
+				<option value="pull-left">PLG_ARKMEDIA_IMAGES_XML_SETTINGS_ALIGN_OPT2</option>
+				<option value="pull-right">PLG_ARKMEDIA_IMAGES_XML_SETTINGS_ALIGN_OPT3</option>
+				<option value="pull-center">PLG_ARKMEDIA_IMAGES_XML_SETTINGS_ALIGN_OPT4</option>
+		</field>
+
+		<field 
+			name="img_modal"
+			type="ark.extendedlist"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.img_modal}"
+			data-attribute="class"
+			data-converter="list-regex"
+			label="PLG_ARKMEDIA_IMAGES_XML_SETTINGS_MODAL_LBL"
+			description="PLG_ARKMEDIA_IMAGES_XML_SETTINGS_MODAL_DESC">
+				<option value="">PLG_ARKMEDIA_IMAGES_XML_SETTINGS_MODAL_OPT1</option>
+				<option value="modal thumbnail">PLG_ARKMEDIA_IMAGES_XML_SETTINGS_MODAL_OPT2</option>
+				<option value="modal">PLG_ARKMEDIA_IMAGES_XML_SETTINGS_MODAL_OPT3</option>
+		</field>
+
+		<field 
+			name="caption_title"
+			type="ark.extendedtext"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.caption_title}"
+			data-attribute="caption_title"
+			label="PLG_ARKMEDIA_IMAGES_XML_SETTINGS_CAPTIONTITLE_LBL"
+			description="PLG_ARKMEDIA_IMAGES_XML_SETTINGS_CAPTIONTITLE_DESC" />
+
+		<field 
+			name="caption_class"
+			type="ark.extendedtext"
+			default="text-center"
+			class="form-control"
+			data-link="{defaults:info.caption_class}"
+			data-attribute="caption_class"
+			data-omissions="cke_widget_editable"
+			label="PLG_ARKMEDIA_IMAGES_XML_SETTINGS_CAPTIONCLASS_LBL"
+			description="PLG_ARKMEDIA_IMAGES_XML_SETTINGS_CAPTIONCLASS_DESC" />
+
+	</fieldset>
+	<fieldset name="link">
+
+		<!-- For Mapping Back to Element, But Path Linking is Done Manually -->
+		<field 
+			name="src"
+			type="ark.extendedhidden"
+			data-attribute="src" />
+
+	</fieldset>
+	<fieldset name="description">
+
+		<field 
+			name="alt"
+			type="ark.extendedtext"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.alt}"
+			data-attribute="alt"
+			label="PLG_ARKMEDIA_IMAGES_XML_DESCRIPTION_ALT_LBL"
+			description="PLG_ARKMEDIA_IMAGES_XML_DESCRIPTION_ALT_DESC" />
+
+	</fieldset>
+</form>

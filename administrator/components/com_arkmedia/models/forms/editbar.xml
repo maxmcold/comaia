@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="editbar" labels="false">
+
+		<field
+			name="back"
+			type="ark.layout"
+			layout="edit.editbar.back"
+			text=""
+			title="COM_ARKMEDIA_XML_EDITBAR_BACK_LBL"
+			extra="uk-flex-item-none"
+			icon="arrow-left">
+				<option
+					key="prefixes"
+					subkey="icon"
+					value="uk-icon-" />
+				<option
+					key="data"
+					subkey="toggle"
+					value="tooltip" />
+		</field>
+
+		<field
+			name="location"
+			type="ark.layout"
+			layout="edit.editbar.location"
+			disabled="true"
+			active="true"
+			text="COM_ARKMEDIA_XML_EDITBAR_LOCATION_LBL"
+			extra="uk-flex-item-auto uk-text-left"
+			icon="folder" />
+
+		<field
+			name="close"
+			type="ark.layout"
+			layout="edit.editbar.close"
+			text=""
+			title="COM_ARKMEDIA_XML_EDITBAR_CLOSE_LBL"
+			extra="uk-flex-item-none"
+			icon="close"
+			iconextra="text-danger">
+				<option
+					key="prefixes"
+					subkey="icon"
+					value="uk-icon-" />
+				<option
+					key="data"
+					subkey="toggle"
+					value="tooltip" />
+		</field>
+
+	</fieldset>
+</form>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="action-list" id="action-list" labels="false" action="index.php?option=com_arkmedia&amp;task=list.action">
+
+		<field
+			name="stack"
+			id="actionstack"
+			type="hidden" />
+
+		<field
+			name="path"
+			id="actionpath"
+			type="hidden" />
+
+		<field
+			name="item"
+			id="actionitem"
+			type="hidden" />
+
+		<field
+			name="action"
+			id="actionaction"
+			type="hidden" />
+
+		<field
+			name="extra"
+			id="actionextra"
+			type="hidden" />
+
+		<field 
+			name="actionedit"
+			type="ark.editdata" />
+
+		<field 
+			name="redirect"
+			editwait="1"
+			type="ark.redirect" />
+
+		<field 
+			name="token"
+			type="ark.token" />
+
+	</fieldset>
+	<fieldset name="action-upload" class="collapse" id="action-upload" labels="false" files="true" action="index.php?option=com_arkmedia&amp;task=list.file" permission="ark.action.upload">
+
+		<field 
+			name="note"
+			type="ark.message"
+			tag="span"
+			class="form-control-static"
+			label="COM_ARKMEDIA_XML_SUBACTIONS_UPLOAD_MSG" />
+
+		<field 
+			name="file"
+			type="file"
+			id="uploadfile"
+			label="COM_ARKMEDIA_XML_ACTIONS_UPLOAD_LBL" />
+
+		<field
+			name="stack"
+			id="uploadstack"
+			type="hidden" />
+
+		<field
+			name="path"
+			id="uploadpath"
+			type="hidden" />
+
+		<field 
+			name="uploadedit"
+			type="ark.editdata" />
+
+		<field 
+			name="redirect"
+			editwait="1"
+			type="ark.redirect" />
+
+		<field 
+			name="token"
+			type="ark.token" />
+
+		<field
+			name="upload"
+			id="upload"
+			type="ark.layout"
+			layout="list.subactions.upload"
+			sublayout="upload"
+			colour="primary"
+			text="COM_ARKMEDIA_XML_SUBACTIONS_UPLOAD_LBL"
+			icon="upload"
+			togglename="uploadtoggle"
+			fieldname="uploadfile"
+			stackname="uploadstack"
+			pathname="uploadpath" />
+
+	</fieldset>
+	<fieldset name="action-new-folder" class="collapse" id="action-new-folder" labels="false" action="index.php?option=com_arkmedia&amp;task=list.folder" permission="ark.action.folder">
+
+		<field
+			name="path"
+			id="folderpath"
+			type="ark.layout"
+			layout="list.subactions.newfolder"
+			size="41"
+			class="form-control"
+			disabled="true"
+			readonly="true" />
+
+		<field 
+			name="folder" 
+			type="text" 
+			id="folderfolder"
+			class="form-control"
+			translateHint="true"
+			hint="COM_ARKMEDIA_XML_SUBACTIONS_FOLDER_HINT"
+			label="COM_ARKMEDIA_XML_ACTIONS_UPLOAD_LBL">
+				<!-- @TODO: HTML Syntax Error Here That Busts IE9 (see Joomla code bug tracker), Introduce This Feature With Directory Name Suggestions?
+				<option	text="Banners" value="Banners" />
+				<option	text="Headers" value="Headers" />
+				<option	text="Icons" value="Icons" />
+				<option	text="Images" value="Images" />
+				<option	text="Logos" value="Logos" />
+				<option	text="Samples" value="Samples" />
+				-->
+		</field>
+
+		<field 
+			name="folderedit"
+			type="ark.editdata" />
+
+		<field 
+			name="redirect"
+			editwait="1"
+			type="ark.redirect" />
+
+		<field 
+			name="token"
+			type="ark.token" />
+
+		<field 
+			name="new-folder"
+			type="ark.button"
+			text="COM_ARKMEDIA_XML_SUBACTIONS_FOLDER_LBL"
+			icon="plus" />
+
+	</fieldset>
+	<fieldset name="action-delete-items" id="action-delete-items" labels="false" action="index.php?option=com_arkmedia&amp;task=list.delete" permission="ark.action.remove">
+
+		<field
+			name="stack"
+			id="deletestack"
+			type="hidden" />
+
+		<field
+			name="path"
+			id="deletepath"
+			type="hidden" />
+
+		<field
+			name="folders"
+			id="deletefolders"
+			type="hidden" />
+
+		<field
+			name="files"
+			id="deletefiles"
+			type="hidden" />
+
+		<field 
+			name="deleteedit"
+			type="ark.editdata" />
+
+		<field 
+			name="redirect"
+			editwait="1"
+			type="ark.redirect" />
+
+		<field 
+			name="token"
+			type="ark.token" />
+
+	</fieldset>
+</form>

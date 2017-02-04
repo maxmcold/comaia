@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="resize" align="left" hidden="mini,small" bootstrap="true" labels="false" permission="ark.ui.resize">
+
+		<field
+			name="right"
+			type="ark.resizebutton"
+			group="resize"
+			title="COM_ARKMEDIA_XML_TOOLBAR_RIGHT_LBL"
+			tag="radio">
+				<option	key="data" subkey="toggle" value="tooltip" />
+				<option	key="data" subkey="placement" value="bottom" />
+		</field>
+
+		<field
+			name="mixed"
+			type="ark.resizebutton"
+			group="resize"
+			title="COM_ARKMEDIA_XML_TOOLBAR_MIXED_LBL"
+			tag="radio">
+				<option	key="data" subkey="toggle" value="tooltip" />
+				<option	key="data" subkey="placement" value="bottom" />
+		</field>
+
+		<field
+			name="middle"
+			type="ark.resizebutton"
+			group="resize"
+			title="COM_ARKMEDIA_XML_TOOLBAR_MIDDLE_LBL"
+			tag="radio">
+				<option	key="data" subkey="toggle" value="tooltip" />
+				<option	key="data" subkey="placement" value="bottom" />
+		</field>
+
+	</fieldset>
+</form>

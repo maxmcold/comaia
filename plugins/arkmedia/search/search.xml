@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="arkmedia" method="upgrade">
+	<name>Ark Media - Search</name>
+	<creationDate>August 2014</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>WebxSolution Ltd</author>
+	<authorEmail>info@arkextensions.com</authorEmail>
+	<authorUrl>http://www.arkextensions.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<div class="ark-install-box well pull-left text-center">
+			<!-- Only Display on Installer Screen (not config screen), Colour Required for Tooltips -->
+			<style>
+				.ark-install-box .ark-logo
+				{
+					width 		: auto;
+					height 		: auto;
+					margin 		: 0px;
+
+					color 		: #0099CC;
+					font-size 	: 70px;
+				}
+				.ark-install-box 				{ display : none; }
+				.com_installer .ark-install-box { display : block; }
+				.ark-install-box h1 			{ color : #333333; }
+			</style>
+			<link rel="stylesheet" href="../media/arkmedia/css/ark-logo.min.css" type="text/css" />
+			<i class="ark-logo icon-arkmedia"></i>
+			<h1>Welcome to the<br /> Ark Media Suite.</h1>
+			<h2>
+				<small>Search Features Added!</small>
+			</h2>
+			<a class="btn" href="index.php?option=com_plugins&view=plugins&filter_folder=arkmedia"><i class="icon-publish text-success"></i> Enable Plugin</a>
+			<a class="btn" href="http://docs.arkextensions.com" target="_blank"><i class="icon-book"></i> Docs</a>
+		</div>
+		<div class="clearfix"></div>]]>
+	</description>
+	<scriptfile>script.php</scriptfile>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_arkmedia_search.ini</language>
+		<language tag="en-GB">en-GB.plg_arkmedia_search.sys.ini</language>
+	</languages>
+	<files>
+		<folder>css</folder>
+		<folder>forms</folder>
+		<folder>js</folder>
+		<folder>layouts</folder>
+		<filename plugin="search">search.php</filename>
+		<file>index.html</file>
+	</files>
+	<config addfieldpath="/administrator/components/com_arkmedia/models/fields">
+		<fields name="params">
+			<fieldset name="basic">
+
+				<!-- These Parameters Correlate With the Component's Config Counterpart Parameter. -->
+				<!-- Their Purpose is to set Stack Specific Defaults to Each Component Config Option -->
+				<field
+					name="folder-locations"
+					type="hidden"
+					default=""
+					filter="path"
+				/>
+
+				<field
+					name="allowed-types"
+					type="ark.multiplehidden"
+					default=""
+					filter="array"
+				/>
+
+				<!-- Opt Out of Registering for Component's Config Parameters -->
+				<field name="register-folder-default" type="hidden" default="0" filter="int" />
+				<field name="register-folder-locations" type="hidden" default="0" filter="int" />
+				<field name="register-allowed-types" type="hidden" default="0" filter="int" />
+				<field name="register-custom-allowed-types-folder" type="hidden" default="0" filter="int" />
+
+				<!-- Opt Out of Registering for Compulsory Path Checks -->
+				<field name="register-path" type="hidden" default="0" filter="int" />
+
+				<!-- Opt In to Forced Registry of Stack Regardless of Stack Exclusion Options -->
+				<field name="register-force-registry" type="hidden" default="1" filter="int" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

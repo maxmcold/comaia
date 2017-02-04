@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="search" id="ark-search" align="right" labels="false" permission="ark.action.search">
+
+		<field 
+			name="search_toggle" 
+			type="ark.button" 
+			colour="plain"
+			text=""
+			title="PLG_ARKMEDIA_SEARCH_XML_TOOLBAR_SEARCH_TTL"
+			icon="search">
+				<option
+					key="data"
+					subkey="action"
+					value="search" />
+				<option
+					key="data"
+					subkey="action-value"
+					value="toggle" />
+				<option
+					key="data"
+					subkey="type"
+					value="off" />
+		</field>
+
+		<field 
+			name="search_preloader" 
+			type="ark.button" 
+			colour="plain"
+			text=""
+			title="PLG_ARKMEDIA_SEARCH_XML_TOOLBAR_PRELOADER_TTL"
+			icon="spinner">
+				<option
+					key="data"
+					subkey="action"
+					value="search" />
+				<option
+					key="data"
+					subkey="action-value"
+					value="preloader" />
+		</field>
+
+		<field
+			name="search_field"
+			type="ark.extendedtext"
+			data-action="search"
+			data-action-value="search"
+			class="form-control"
+			size="20"
+			hint="PLG_ARKMEDIA_SEARCH_XML_TOOLBAR_SEARCH_HINT" />
+
+		<field 
+			name="search_clear"
+			type="ark.button"
+			colour="plain"
+			text=""
+			title="PLG_ARKMEDIA_SEARCH_XML_TOOLBAR_CLEAR_TTL"
+			icon="cancel-circle">
+				<option
+					key="data"
+					subkey="action"
+					value="search" />
+				<option
+					key="data"
+					subkey="action-value"
+					value="clear" />
+		</field>
+
+	</fieldset>
+</form>

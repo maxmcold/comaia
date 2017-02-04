@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="settings">
+
+		<field 
+			name="docs_modal"
+			type="ark.extendedlist"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.docs_modal}"
+			data-attribute="class"
+			data-converter="list-regex"
+			label="PLG_ARKMEDIA_DOCUMENTS_XML_SETTINGS_MODAL_LBL"
+			description="PLG_ARKMEDIA_DOCUMENTS_XML_SETTINGS_MODAL_DESC">
+				<option value="">JNO</option>
+				<option value="modal">JYES</option>
+		</field>
+
+	</fieldset>
+	<fieldset name="link">
+
+		<!-- For Mapping Back to Element, But Path Linking is Done Manually -->
+		<field 
+			name="href"
+			type="ark.extendedhidden"
+			data-attribute="href" />
+
+		<field 
+			name="target"
+			type="ark.extendedlist"
+			default=""
+			class="form-control"
+			data-link="{defaults:info.target}"
+			data-attribute="target"
+			label="PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_LBL"
+			description="PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_DESC">
+				<option value="">PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_OPT1</option>
+				<!-- @todo	Support the Following Options Which Require Additional Information -->
+				<!--<option value="frame">PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_OPT2</option>-->
+				<!--<option value="popup">PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_OPT3</option>-->
+				<option value="_blank">PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_OPT4</option>
+				<option value="_top">PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_OPT5</option>
+				<option value="_self">PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_OPT6</option>
+				<option value="_parent">PLG_ARKMEDIA_DOCUMENTS_XML_LINK_TARGET_OPT7</option>
+		</field>
+
+	</fieldset>
+</form>

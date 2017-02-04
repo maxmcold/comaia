@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="insert" labels="false">
+
+		<field
+			name="insert"
+			type="ark.extendedbutton"
+			id="editinsert"
+			text="COM_ARKMEDIA_BTN_INSERTINTO"
+			html="true"
+			colour="primary"
+			icon="download">
+				<option
+					key="prefixes"
+					subkey="icon"
+					value="uk-icon-" />
+				<option
+					key="data"
+					subkey="action"
+					value="insert" />
+		</field>
+
+	</fieldset>
+	<fieldset name="close" labels="false">
+
+		<field
+			name="close"
+			type="ark.extendedbutton"
+			id="editclose"
+			text="COM_ARKMEDIA_BTN_CLOSE"
+			icon="close"
+			iconextra="text-danger">
+				<option
+					key="prefixes"
+					subkey="icon"
+					value="uk-icon-" />
+				<option
+					key="data"
+					subkey="action"
+					value="exit" />
+		</field>
+
+	</fieldset>
+	<fieldset name="back" labels="false">
+
+		<field
+			name="back"
+			type="ark.extendedbutton"
+			id="editback"
+			text="COM_ARKMEDIA_BTN_BROWSE"
+			icon="arrow-left">
+				<option
+					key="prefixes"
+					subkey="icon"
+					value="uk-icon-" />
+				<option
+					key="data"
+					subkey="action"
+					value="browse" />
+		</field>
+
+	</fieldset>
+</form>

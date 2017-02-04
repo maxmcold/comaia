@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="3.4" method="upgrade">
+	<name>Ark Media Suite</name>
+	<packagename>arkmediasuite</packagename>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>WebxSolution Ltd</author>
+	<authorEmail>info@arkextensions.com</authorEmail>
+	<authorUrl>http://www.arkextensions.com</authorUrl>
+	<version type="free">1.12.1</version>
+	<packager>Ark Media</packager>
+	<packagerurl>http://www.arkextensions.com</packagerurl>
+	<files folder="packages">
+		<!-- ID === DB Element Column & XML Plugin Name -->
+		<file type="component" id="com_arkmedia">com_arkmedia.zip</file>
+		<file type="file" id="arkmedia">media.zip</file>
+		<file type="plugin" group="arkmedia" enabled="1" order="1" id="images">plg_arkmedia_images.zip</file>
+		<file type="plugin" group="arkmedia" enabled="1" order="4" id="documents">plg_arkmedia_documents.zip</file>
+		<file type="plugin" group="arkmedia" enabled="1" order="5" id="search">plg_arkmedia_search.zip</file>
+		<file type="plugin" group="arkmedia-connector" enabled="1" id="arkeditor">plg_arkmedia-connector_arkeditor.zip</file>
+		<file type="plugin" group="arkmedia-feature" enabled="1" id="userfolders">plg_arkmedia-feature_userfolders.zip</file>
+		<file type="plugin" group="quickicon" enabled="1" id="arkmedia">plg_quickicon_arkmedia.zip</file>
+		<file type="plugin" group="editors-xtd" enabled="1" id="arkmedia">plg_editors-xtd_arkmedia.zip</file>
+	</files>
+	<scriptfile>script.php</scriptfile>
+	<dependencies>
+		<dependency type="platform" name="joomla" operator=">=" version="3.0" />
+	</dependencies>
+	<updateservers>
+		<server type="extension" priority="1" name="Ark Media Suite">http://update.arkextensions.com/update-arkmediasuite-basic.xml</server>
+	</updateservers>
+</extension>

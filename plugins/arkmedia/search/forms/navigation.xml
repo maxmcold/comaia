@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="nav">
+
+		<field 
+			name="search" 
+			type="ark.button" 
+			colour="plain"
+			tag="radio"
+			group="nav"
+			text=""
+			title="PLG_ARKMEDIA_SEARCH_XML_NAVIGATION_LBL"
+			icon="search">
+				<!-- Required For Stack Integration -->
+				<option
+					key="data"
+					subkey="stack-control"
+					value="stack" />
+				<option
+					key="data"
+					subkey="stack-value"
+					value="search" />
+		</field>
+
+	</fieldset>
+</form>

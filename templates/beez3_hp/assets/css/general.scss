@@ -1,0 +1,187 @@
+// colore
+$testo : #848789;
+$nero : #353738;
+$blu : #2c486a;
+$bianco : #fff;
+// ---------
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-light {
+  font-weight: lighter;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+#slider {
+  img {
+    width: 100%;
+  }
+}
+
+#brand {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  h1 {
+    font-size:20px;
+  }
+  .partner {
+    padding:20px;
+    img {
+      width:200px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+#azienda {
+  border-top:1px solid $nero;
+  .azienda-testo {
+    padding-top:25px;
+  }
+  .spazio-int {
+    padding:13px 20px 0 20px;
+  }
+  h1 {
+    font-size:18px;
+    color:$nero;
+  }
+  p {
+    color:$testo;
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align: justify;
+  }
+  a {
+    text-align: center;
+    display: block;
+    margin:20px auto;
+    border-top:1px solid $nero;
+    padding-top: 10px;
+    width:30%;
+    color:$nero;
+  }
+}
+
+.navbar {
+  margin:0;
+  padding:0;
+}
+
+.navbar-brand {
+  position: absolute;
+  background: $bianco;
+  z-index: 1000;
+  padding:10px;
+  height: 80px;
+  display: block;
+  border:1px solid $nero;
+  img {
+    width:250px;
+    margin-top:5px;
+  }
+}
+
+.menu {
+  text-transform: uppercase;
+  a {
+    color:$nero;
+    font-weight: bold;
+  }
+}
+
+footer {
+  background: $blu;
+  padding-top:80px;
+  padding-bottom:80px;
+  ul {
+    list-style: none;
+    li {
+      color:$bianco;
+      a {
+        color:$bianco;
+        &:hover {
+          color: lighten($nero, 60%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.social-bar {
+  img {
+    width:40px;
+    margin-top:40px;
+  }
+}
+
+.cover {
+    width:100% !important;
+}
+
+.divisore {
+  background: lighten($nero, 65%);
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+.area-testo {
+  padding-top:20px;
+  padding-bottom:40px;
+}
+
+@media screen and (max-width: 959px)  {
+  .allinea-sinistra {
+    text-align: center !important;
+    padding:0;
+    ul {
+      padding:0;
+    }
+    li {
+      padding:20px;
+      border-top:1px solid $bianco;
+    }
+  }
+
+  .navbar-toggle {
+    border:1px solid $nero;
+    span {
+      background: $nero;
+    }
+  }
+
+  .navbar-brand {
+    height: 45px !important;
+    border:none;
+    padding:5px;
+    position: inherit !important;
+    img {
+      width: auto !important;
+      margin-top:0 !important;
+    }
+  }
+
+  .navbar-nav {
+    li {
+      text-align: center;
+      border-top:1px solid $nero;
+    }
+  }
+}
+
+.no-padding {
+  padding:0 !important;
+}
+
+.no-margin {
+  margin:0 !important;
+}

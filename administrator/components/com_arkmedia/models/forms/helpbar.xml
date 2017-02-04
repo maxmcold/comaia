@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="refresh" labels="false">
+
+		<field 
+			name="refresh"
+			type="ark.extendedbutton"
+			text=""
+			size="small"
+			colour="plain"
+			key="redirect"
+			action="ark.ui.refresh"
+			redirect="true"
+			href="index.php?option=com_arkmedia&amp;task=list.refresh"
+			title="COM_ARKMEDIA_XML_HELPBAR_REFRESH_LBL"
+			icon="loop2">
+				<option	key="data" subkey="stack-control" value="refresh" />
+				<option	key="data" subkey="toggle" value="tooltip" />
+				<option	key="data" subkey="placement" value="top" />
+		</field>
+
+	</fieldset>
+	<fieldset name="config" labels="false">
+
+		<field 
+			name="config"
+			type="ark.extendedbutton"
+			text=""
+			size="small"
+			only="admin"
+			action="core.admin"
+			colour="plain"
+			redirect="true"
+			href="index.php?option=com_config&amp;view=component&amp;component=com_arkmedia"
+			title="COM_ARKMEDIA_XML_HELPBAR_CONFIG_LBL"
+			icon="cog">
+				<option	key="data" subkey="toggle" value="tooltip" />
+				<option	key="data" subkey="placement" value="top" />
+		</field>
+
+	</fieldset>
+	<fieldset name="help" labels="false">
+
+		<field 
+			name="help"
+			type="ark.extendedbutton"
+			text=""
+			bootstrap="true"
+			size="small"
+			colour="plain"
+			action="ark.ui.help"
+			href="http://help.arkextensions.com"
+			target="_blank"
+			title="COM_ARKMEDIA_XML_HELPBAR_HELP_LBL"
+			icon="question old-question-circle">
+				<option	key="data" subkey="toggle" value="tooltip" />
+				<option	key="data" subkey="placement" value="top" />
+		</field>
+
+	</fieldset>
+	<fieldset name="bug" labels="false">
+
+		<field 
+			name="bug"
+			type="ark.extendedbutton"
+			text=""
+			bootstrap="true"
+			size="small"
+			colour="plain"
+			action="ark.ui.bug"
+			href="http://bugs.arkextensions.com"
+			target="_blank"
+			title="COM_ARKMEDIA_XML_HELPBAR_WARNING_LBL"
+			icon="warning">
+				<option	key="data" subkey="toggle" value="tooltip" />
+				<option	key="data" subkey="placement" value="top" />
+		</field>
+
+	</fieldset>
+</form>

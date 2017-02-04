@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.4" method="upgrade">
+	<name>Ark Media Library</name>
+	<packagename>arkmedia</packagename>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>WebxSolution Ltd</author>
+	<authorEmail>info@arkextensions.com</authorEmail>
+	<authorUrl>http://www.arkextensions.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<div class="well">
+			<img src="../media/arkmedia/images/ark-media-logo-lg.png" alt="Ark Media Logo" />
+			<!-- Colour Required [#1199] -->
+			<h1 style="color : #333333;">Welcome to the<br> Ark Media Suite.</h1>
+			<a class="btn" href="index.php?option=com_config&amp;view=component&amp;component=com_arkmedia"><i class="icon-cog"></i> Config</a>
+			<a class="btn" href="http://docs.arkextensions.com" target="_blank"><i class="icon-book"></i> Docs</a>
+			<a class="btn" href="index.php?option=com_arkmedia"><i class="icon-play text-info"></i> Start!</a>
+		</div>]]>
+	</description>
+	<changelog>
+		<![CDATA[
+			- 1.0.0 - Initial build.
+		]]>
+	</changelog>
+	<scriptfile>script.php</scriptfile>
+	<fileset>
+		<files target="media">
+			<folder>arkmedia</folder>
+		</files>
+	</fileset>
+</extension>
